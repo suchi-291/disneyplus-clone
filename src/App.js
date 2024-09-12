@@ -1,5 +1,19 @@
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+} from "react-router-dom";
+import Login from "../src/components/Login";
+
 function App() {
-  return <h2>Hello Earth! Let's build the Disney Plus Clone</h2>;
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" element={<Login />}></Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
+//router allows to go between the pages with having them to reload
